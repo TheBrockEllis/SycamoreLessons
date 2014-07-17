@@ -17,7 +17,7 @@
     <!-- Include the compiled Ratchet JS -->
     <script src="ratchet/js/ratchet.min.js"></script>
   </head>
-  <body>
+  <body id="index">
 
     <!-- Make sure all your bars are the first things in your <body> -->
     <header class="bar bar-nav">
@@ -32,9 +32,12 @@
       <p class="content-padded">Please log in to get started!</p>
 
         <div class="bar bar-standard">
-            <button class="btn btn-positive btn-block">Login to Sycamore</button>
+            <a href="login.html" data-ignore="push" class="btn btn-positive btn-block">Login to Sycamore</a>
         </div>
     </div>
+
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/index.js"></script>
 
   </body>
 </html>
