@@ -4,17 +4,43 @@
  * Ready function: classes_ready
  */
 
-console.log("Got to classes.js");
+/*
+ * Page Events
+ */
 
-SycamoreApi("Me", "classes_ready");
+$("#logout").click(function(){
+    localStorage.clear();
+    window.location.href = "index.html";
+});
 
-function classes_ready(){
+$("body").on("click", "a.classroom", function(){
+    window.classID = $(this).attr("id");
+    window.className = $(this).attr("name");
+});
 
-    $("#logout").click(function(){
-        localStorage.clear();
-        window.location.href = "index.html";
+/*
+ * API Data
+ */
+
+var userid = localStorage.getItem("UserID");
+
+SycamoreApi("User/"+userid+"/Classes", "classes_ready");
+
+function classes_ready(data){
+
+    var listitems = "";
+    $.each(data, function(type, classes){
+        listitems += "<li class='table-view-divider'>"+type+"</li>";
+
+        $.each(classes, function(index, value){
+            listitems += "<li class='table-view-cell'>";
+            listitems += "<a class='push-right classroom' id='"+value.ID+"' name='"+value.Name+"' href='lessons.html'>";
+            listitems += "<strong>"+value.Name+"</strong>";
+            listitems += "</a></li>";
+        });
+
     });
 
-    //SycamoreApi("look for my classes")
-}
+    $("ul").empty().append(listitems);
 
+}

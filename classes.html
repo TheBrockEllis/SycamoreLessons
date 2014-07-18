@@ -14,6 +14,10 @@
     <!-- Include the compiled Ratchet CSS -->
     <link href="ratchet/css/ratchet.min.css" rel="stylesheet">
 
+    <!-- Include an optional CSS theme for specific platforms -->
+    <!--<link href="ratchet/css/ratchet-theme-ios.min.css" rel="stylesheet">-->
+    <link href="ratchet/css/ratchet-theme-android.min.css" rel="stylesheet">
+
     <!-- Include the compiled Ratchet JS -->
     <script src="ratchet/js/ratchet.min.js"></script>
   </head>
@@ -21,44 +25,26 @@
 
     <!-- Make sure all your bars are the first things in your <body> -->
     <header class="bar bar-nav">
-        <a id="logout" class="btn btn-negative btn-outlined pull-right" href="#">
+        <button class="btn btn-link btn-nav pull-right" id="logout">
             Logout
-        </a>
+            <span class="icon icon-gear"></span>
+        </button>
         <h1 class="title">Classes</h1>
     </header>
 
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
     <div class="content" id="classes">
-
-      <div class="card">
-        <ul class="table-view">
-          <li class="table-view-divider">Day Long</li>
-          <li class="table-view-cell">
-            <a class="push-right" href="lessons.html">
-              <strong>Class #1</strong>
-            </a>
-          </li>
-          <li class="table-view-cell">
-            <a class="push-right" href="lessons.html">
-              <strong>Class #2</strong>
-            </a>
-          </li>
-          <li class="table-view-divider">Period Long</li>
-          <li class="table-view-cell">
-            <a class="push-right" href="lessons.html">
-              <strong>Class #3</strong>
-            </a>
-          </li>
-          <li class="table-view-cell">
-            <a class="push-right" href="lessons.html">
-              <strong>Class #4</strong>
-            </a>
-          </li>
-        </ul>
-      </div>
+        <div class="card">
+            <ul class="table-view">
+                <li class='table-view-cell'>
+                    <img src="images/loading.gif" style="display: block; margin: 0 auto;" />
+                </li>
+            </ul>
+        </div>
     </div>
 
     <script src="scripts/jquery.js"></script>
     <script src="scripts/index.js"></script>
+    <script src="scripts/classes.js"></script>
   </body>
 </html>

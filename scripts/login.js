@@ -20,9 +20,15 @@ function parseParams (params) {
 }
 
 function me_ready(data) {
-    localStorage.setItem("Me", JSON.stringify(data) );
+    $.each(data, function(key, value){
+        localStorage.setItem(key, value);
+    });
+
+    //localStorage.setItem("Me", JSON.stringify(data) );
+
+    //console.log("Grabbed me");
     // Uncomment the following line to redirect
-    window.open("classes.html", "_self");
+    window.location.href = "classes.html";
 }
 
 // Function to store the access token in the client in a cookie once authentication is completed
@@ -46,7 +52,7 @@ function setSessionStorage(token){
 
 // If there is no parameter hash, redirect to sycamore for authorization. Otherwise, request is callback so parse values from hash and display in browser
 if (window.location.hash.length == 0) {
-    console.log("Got here");
+    //console.log("Got here");
     var path = 'http://dev.sycamoreeducation.com/oauth/authorize.php?';
     var queryParams = ['client_id=' + client_id,
                        'redirect_uri=' + callback_uri,

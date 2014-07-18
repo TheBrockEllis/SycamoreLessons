@@ -14,6 +14,10 @@
     <!-- Include the compiled Ratchet CSS -->
     <link href="ratchet/css/ratchet.min.css" rel="stylesheet">
 
+    <!-- Include an optional CSS theme for specific platforms -->
+    <!--<link href="ratchet/css/ratchet-theme-ios.min.css" rel="stylesheet">-->
+    <link href="ratchet/css/ratchet-theme-android.min.css" rel="stylesheet">
+
     <!-- Include the compiled Ratchet JS -->
     <script src="ratchet/js/ratchet.min.js"></script>
   </head>
@@ -22,45 +26,20 @@
     <!-- Make sure all your bars are the first things in your <body> -->
     <header class="bar bar-nav">
         <a class="icon icon-left-nav pull-left" href="classes.html"></a>
-        <h1 class="title">Class Name</h1>
+        <h1 class="title"></h1>
     </header>
 
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
-    <div class="content">
+    <div class="content" id="lessons">
 
-        <form class="content-padded">
-            <select name="subject">
-                <option value="1234">Math</option>
-                <option value="1234">English</option>
-                <option value="1234">History</option>
-                <option value="1234">Science</option>
-            </select>
-        </form>
+        <div class="card">
+            <ul class="table-view">
+                <li class='table-view-cell'>
+                    <img src="images/loading.gif" style="display: block; margin: 0 auto;" />
+                </li>
+            </ul>
+        </div>
 
-      <div class="card">
-        <ul class="table-view">
-          <li class="table-view-cell">
-            <a class="push-right" href="lesson.html">
-              <strong>Lesson #1</strong>
-            </a>
-          </li>
-          <li class="table-view-cell">
-            <a class="push-right" href="lesson.html">
-              <strong>Lesson #2</strong>
-            </a>
-          </li>
-          <li class="table-view-cell">
-            <a class="push-right" href="lesson.html">
-              <strong>Lesson #3</strong>
-            </a>
-          </li>
-          <li class="table-view-cell">
-            <a class="push-right" href="lesson.html">
-              <strong>Lesson #4</strong>
-            </a>
-          </li>
-        </ul>
-      </div>
     </div>
 
   </body>
