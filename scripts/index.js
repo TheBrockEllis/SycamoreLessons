@@ -29,7 +29,7 @@ function SycamoreApi(endpoint, callback, params, data){
     //console.log("Callback: " + callback);
 
     $.ajax({
-        url: "http://dev.sycamoreeducation.com/api/v1/"+endpoint,
+        url: "https://app.sycamoreeducation.com/api/v1/"+endpoint,
         type: "GET",
         crossDomain: true,
         datatype: 'json',

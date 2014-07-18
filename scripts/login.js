@@ -1,5 +1,5 @@
 var client_id = "53c7d7c38f7d6"; // Replace text in quotes with your API Key
-var callback_uri = "http://127.0.0.1:8000/login.html";
+var callback_uri = "http://thebrockellis.github.io/SycamoreLessons/login.html";
 
 // NOTE: YOU ALSO MUST set Redirect URI for API Key to full home url for this HTML/JS document
 // The Redirect URI provided MUST match the callback_uri value exactly - this is part of the OAuth 2 Standard,
