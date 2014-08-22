@@ -14,6 +14,7 @@ $("#logout").click(function(){
 });
 
 $("body").on("click", "a.classroom", function(){
+    //console.log("Link clicked");
     window.classID = $(this).attr("id");
     window.className = $(this).attr("name");
 });
@@ -27,7 +28,6 @@ var userid = localStorage.getItem("UserID");
 SycamoreApi("User/"+userid+"/Classes", "classes_ready");
 
 function classes_ready(data){
-
     var listitems = "";
     $.each(data, function(type, classes){
         listitems += "<li class='table-view-divider'>"+type+"</li>";
