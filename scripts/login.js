@@ -47,19 +47,24 @@ $(document).on("deviceready", function(){
     var authWindow = window.open(url, '_blank', 'location=yes,toolbar=yes');
 
     $(authWindow).on('loadstart', function(e) {
-        console.log("Loadstart listener registers");
+        console.log("Loading started");
         var url = e.originalEvent.url;
-        var code = /\?access_token=(.+)$/.exec(url);
+        
+        console.log("URL: " + url);
+
+        var token = /\?access_token=(.+)$/.exec(url);
         var error = /\?error=(.+)$/.exec(url);
 
-        if (code || error) {
+        console.log("Token: " + token);
+        
+        if (token || error) {
             authWindow.close();
             
             //var rawParams = window.location.hash.substring(1);
             //var oAuthData = parseParams(rawParams);
 
             //choose which type of storage you'd like to keep your token in
-            setLocalStorage(oAuthData[0]);
+            setLocalStorage(token);
 
             //fetch and store data about this user
             SycamoreApi("Me", "me_ready");
