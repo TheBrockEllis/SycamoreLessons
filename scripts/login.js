@@ -55,14 +55,14 @@ $(document).on("deviceready", function(){
         //var token = /\?#access_token=(.+)$/.exec(url);
         //var error = /\?#error=(.+)$/.exec(url);
         
-        var rawParams = url.split("#");
+        if(url.indexOf("#") >= 0)  var rawParams = url.split("#");
         console.log("raw params: " + rawParams);
 
         if(rawParams) {
             var oAuthData = parseParams(rawParams[1]);
             console.log("oauth data: " + oAuthData);
             
-            console.log("Token: " + token);
+            console.log("Token: " + oAuthData[0]);
         
             if(oAuthData[0]){
             //if (token || error) {
@@ -72,7 +72,7 @@ $(document).on("deviceready", function(){
                 //var oAuthData = parseParams(rawParams);
     
                 //choose which type of storage you'd like to keep your token in
-                setLocalStorage(token);
+                setLocalStorage(oAuthData[0]);
     
                 //fetch and store data about this user
                 SycamoreApi("Me", "me_ready");
