@@ -29,8 +29,10 @@
       <scheme>sycamore</scheme>
     </gap:url-scheme>
 
-    <access origin="https://app.sycamoreeducation.com" subdomains="true" />
+    <access origin="*" />
 
     <gap:plugin name="org.apache.cordova.inappbrowser" />
     
+    <preference name="Orientation" value="portrait" />
+    <preference name="permissions" value="none"/>
 </widget>
