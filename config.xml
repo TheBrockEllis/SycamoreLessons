@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "com.sycamoreschool.mobile"
+        id          = "com.sycamorelessons.www"
         versionCode = "010" 
         version     = "0.1.0" >
 
     <!-- versionCode is optional and Android only -->
 
-    <name>Sycamore School Mobile</name>
+    <name>Sycamore Lessons</name>
 
     <description>
         A small hybrid app that allows a teacher to quickly view their Sycamore School's classroom lesson plans.
@@ -26,7 +26,7 @@
     <preference name="target-device" value="handset" /> 
     
     <gap:url-scheme role="None">
-      <scheme>sycamore</scheme>
+        <scheme>sycamore</scheme>
     </gap:url-scheme>
 
     <access origin="*" />
