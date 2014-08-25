@@ -64,7 +64,7 @@ if (window.location.hash.length == 0) {
 
     //window.open(url,"_self");
     //window.open(url, '_blank', 'location=no,toolbar=no');
-    window.open(url, '_blank', '');
+    window.open(url, '_blank', 'location=yes,toolbar=yes');
 } else {
     // Else if there is a parameter hash, parse the parameters from it, set a cookie in the client to store the access token, display values in parameter hash, display explanation of what's happening, and link back to PHP Demo application script within 10 seconds.
     var rawParams = window.location.hash.substring(1);
