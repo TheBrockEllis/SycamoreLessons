@@ -52,30 +52,33 @@ $(document).on("deviceready", function(){
         
         console.log("URL: " + url);
 
+        //var token = /\?#access_token=(.+)$/.exec(url);
+        //var error = /\?#error=(.+)$/.exec(url);
+        
         var rawParams = url.split("#");
         console.log("raw params: " + rawParams);
 
-        var oAuthData = parseParams(rawParams[1]);
-        console.log("oauth data: " + oAuthData);
-                    
-        //var token = /\?#access_token=(.+)$/.exec(url);
-        //var error = /\?#error=(.+)$/.exec(url);
-
-        console.log("Token: " + token);
-        
-        if (token || error) {
-            authWindow.close();
+        if(rawParams) {
+            var oAuthData = parseParams(rawParams[1]);
+            console.log("oauth data: " + oAuthData);
             
-            //var rawParams = window.location.hash.substring(1);
-            //var oAuthData = parseParams(rawParams);
-
-            //choose which type of storage you'd like to keep your token in
-            setLocalStorage(token);
-
-            //fetch and store data about this user
-            SycamoreApi("Me", "me_ready");
-        }
-
+            console.log("Token: " + token);
+        
+            if(oAuthData[0]){
+            //if (token || error) {
+                authWindow.close();
+                
+                //var rawParams = window.location.hash.substring(1);
+                //var oAuthData = parseParams(rawParams);
+    
+                //choose which type of storage you'd like to keep your token in
+                setLocalStorage(token);
+    
+                //fetch and store data about this user
+                SycamoreApi("Me", "me_ready");
+            }
+        }            
+    
     });
 
 });
