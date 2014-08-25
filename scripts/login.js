@@ -51,6 +51,10 @@ function setSessionStorage(token){
     return;
 }
 
+function handleOpenURL(url) {
+  alert("received url: " + url);
+}
+
 // If there is no parameter hash, redirect to sycamore for authorization. Otherwise, request is callback so parse values from hash and display in browser
 if (window.location.hash.length == 0) {
     //console.log("Got here");
