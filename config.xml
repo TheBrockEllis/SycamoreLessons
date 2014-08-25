@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.sycamoreschool.mobile"
+        versionCode = "010" 
+        version     = "0.1.0" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Sycamore School Mobile</name>
+
+    <description>
+        A small hybrid app that allows a teacher to quickly view their Sycamore School's classroom lesson plans.
+    </description>
+
+    <author href="https://app.sycamoreeducation.com/developer" email="development@sycamoreeducation.com">
+        Brock Ellis
+    </author>
+
+    <gap:platform name="ios" />
+    <gap:platform name="android" />
+    <gap:platform name="winphone" />
+    
+    <preference name="target-device" value="handset" /> 
+    
+    <gap:url-scheme role="None">
+      <scheme>sycamore</scheme>
+    </gap:url-scheme>
+
+    <access origin="https://app.sycamoreeducation.com" subdomains="true" />
+
+    <gap:plugin name="org.apache.cordova.inappbrowser" />
+    
+</widget>
