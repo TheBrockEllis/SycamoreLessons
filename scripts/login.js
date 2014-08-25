@@ -52,8 +52,8 @@ $(document).on("deviceready", function(){
         
         console.log("URL: " + url);
 
-        var token = /\?access_token=(.+)$/.exec(url);
-        var error = /\?error=(.+)$/.exec(url);
+        var token = /\?#access_token=(.+)$/.exec(url);
+        var error = /\?#error=(.+)$/.exec(url);
 
         console.log("Token: " + token);
         
