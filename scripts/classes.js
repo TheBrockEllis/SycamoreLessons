@@ -7,8 +7,9 @@
 /*
  * Page Events
  */
-$("document").ready(function(){
-    alert("jQuery loaded");
+document.addEventListener("deviceready", attachEventListeners, false);
+
+function attachEventListeners(){
     
     $("#logout").click(function(){
         localStorage.clear();
@@ -39,7 +40,7 @@ $("document").ready(function(){
        alert("CLICKED"); 
     });
     
-});
+}
 
 /*
  * API Data
