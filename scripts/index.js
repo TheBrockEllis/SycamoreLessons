@@ -23,6 +23,10 @@ jQuery.ajaxSetup({
     cache: false
 });
 
+if (localStorage.getItem("sycamore_auth")) {
+    location.href = "classes.html";
+}
+
 function SycamoreApi(endpoint, callback, params, data){
     console.log("Attempting to call API");
     console.log("Endpoint: " + endpoint);

@@ -37,7 +37,7 @@ function classes_ready(data){
 
     $("ul").empty().append(listitems);
 
-    $(body).on("click", "a.classroom", function(){
+    $("body").on("click", "a.classroom", function(){
         var classID = $(this).attr("id");
         var className = $(this).attr("name");
     
