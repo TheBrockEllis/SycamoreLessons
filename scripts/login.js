@@ -15,20 +15,8 @@ $(document).on("deviceready", function(){
     
         return sycamoreAuth;
     }
-    
-    function me_ready(data) {
-        $.each(data, function(key, value){
-            localStorage.setItem(key, value);
-        });
-    
-        //localStorage.setItem("Me", JSON.stringify(data) );
-    
-        console.log("Grabbed me");
-        // Uncomment the following line to redirect
-        window.location.href = "classes.html";
-    }
-    
-    // Function to store the access token in the client's local (persistent) storage once authentication is completed
+        
+    // Function to store the access token in the client's local (persistent) storage 
     function setLocalStorage(token){
         localStorage.setItem("sycamore_auth", token);
         return;
@@ -82,3 +70,13 @@ $(document).on("deviceready", function(){
     });
 
 });
+
+function me_ready(data) {
+    $.each(data, function(key, value){
+        localStorage.setItem(key, value);
+    });
+
+    console.log("Grabbed me");
+    // Uncomment the following line to redirect
+    window.location.href = "classes.html";
+}

@@ -24,9 +24,9 @@ jQuery.ajaxSetup({
 });
 
 function SycamoreApi(endpoint, callback, params, data){
-    //console.log("Attempting to call API");
-    //console.log("Endpoint: " + endpoint);
-    //console.log("Callback: " + callback);
+    console.log("Attempting to call API");
+    console.log("Endpoint: " + endpoint);
+    console.log("Callback: " + callback);
 
     $.ajax({
         url: "https://app.sycamoreeducation.com/api/v1/"+endpoint,
