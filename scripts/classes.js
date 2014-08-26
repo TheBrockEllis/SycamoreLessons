@@ -42,7 +42,7 @@ $("document").ready(function(){
 });
 
 function attachListeners(){
-    alert("listeners attached");
+    /*alert("listeners attached");
     $("body").on("click", "a.classroom", function(){
         var classID = $(this).attr("id");
         var className = $(this).attr("name");
@@ -77,7 +77,7 @@ function attachListeners(){
         
         window.classID = classID;
         window.className = className;
-    });
+    });*/
 }
 
 
@@ -104,6 +104,6 @@ function classes_ready(data){
     });
 
     $("ul").empty().append(listitems);
-    attachListeners();
+    //attachListeners();
     
 }
