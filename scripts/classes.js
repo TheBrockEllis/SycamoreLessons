@@ -11,6 +11,8 @@ document.addEventListener("deviceready", attachEventListeners, false);
 
 function attachEventListeners(){
     
+    alert("Listeners attached");
+    
     $("#logout").click(function(){
         localStorage.clear();
         window.location.href = "index.html";
