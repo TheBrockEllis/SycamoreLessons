@@ -51,48 +51,6 @@
     <script src="phonegap.js"></script>
     <!-- <script src="scripts/fingerblast.js"></script> -->
     <script src="scripts/classes.js"></script>
-    <script>
-        $("document").ready(function(){
-            alert("listeners attached");
-            $("body").on("click", "a.classroom", function(event){
-                event.preventDefault();
-                
-                var classID = $(this).attr("id");
-                var className = $(this).attr("name");
-            
-                console.log("Link clicked " + classID + className);
-                
-                window.classID = classID;
-                window.className = className;
-            });
-            
-            $("a.classroom").click(function(){
-                alert("clicked from a.classroom");
-                var classID = $(this).attr("id");
-                var className = $(this).attr("name");
-            
-                console.log("Link clicked " + classID + className);
-                
-                window.classID = classID;
-                window.className = className;
-            });
-            
-            $(".classroom").click(function(){
-               alert("CLICKED from class classroom"); 
-            });
-            
-            $("ul").on("click", "a.classroom", function(){
-                alert("clicked from ul");
-                var classID = $(this).attr("id");
-                var className = $(this).attr("name");
-            
-                console.log("Link clicked " + classID + className);
-                
-                window.classID = classID;
-                window.className = className;
-            });
-        });
-    </script>
     
   </body>
 </html>

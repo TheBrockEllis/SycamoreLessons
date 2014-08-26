@@ -1,5 +1,4 @@
 var checkPage = function(){
-    //Only run if twitter-widget exists on page
     //console.log("Checking page");
     var elm = document.getElementsByClassName("content")[0];
     var script = elm.id;

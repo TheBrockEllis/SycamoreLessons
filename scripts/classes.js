@@ -8,14 +8,14 @@
  * Page Events
  */
 $("document").ready(function(){
-    alert("jQery loaded");
+    alert("jQuery loaded");
     
     $("#logout").click(function(){
         localStorage.clear();
         window.location.href = "index.html";
     });
     
-    /*$("body").on("click", "a.classroom", function(){
+    $("body").on("click", "a.classroom", function(){
         var classID = $(this).attr("id");
         var className = $(this).attr("name");
     
@@ -37,49 +37,9 @@ $("document").ready(function(){
     
     $(".classroom").click(function(){
        alert("CLICKED"); 
-    });*/
+    });
     
 });
-
-function attachListeners(){
-    /*alert("listeners attached");
-    $("body").on("click", "a.classroom", function(){
-        var classID = $(this).attr("id");
-        var className = $(this).attr("name");
-    
-        console.log("Link clicked " + classID + className);
-        
-        window.classID = classID;
-        window.className = className;
-    });
-    
-    $("a.classroom").click(function(){
-        alert("clicked from a.classroom");
-        var classID = $(this).attr("id");
-        var className = $(this).attr("name");
-    
-        console.log("Link clicked " + classID + className);
-        
-        window.classID = classID;
-        window.className = className;
-    });
-    
-    $(".classroom").click(function(){
-       alert("CLICKED from class classroom"); 
-    });
-    
-    $("ul").on("click", "a.classroom", function(){
-        alert("clicked from ul");
-        var classID = $(this).attr("id");
-        var className = $(this).attr("name");
-    
-        console.log("Link clicked " + classID + className);
-        
-        window.classID = classID;
-        window.className = className;
-    });*/
-}
-
 
 /*
  * API Data
@@ -104,6 +64,5 @@ function classes_ready(data){
     });
 
     $("ul").empty().append(listitems);
-    //attachListeners();
     
 }
