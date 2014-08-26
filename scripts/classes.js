@@ -42,6 +42,7 @@ $("document").ready(function(){
 });
 
 function attachListeners(){
+    alert("listeners attached");
     $("body").on("click", "a.classroom", function(){
         var classID = $(this).attr("id");
         var className = $(this).attr("name");
@@ -53,6 +54,7 @@ function attachListeners(){
     });
     
     $("a.classroom").click(function(){
+        alert("clicked from a.classroom");
         var classID = $(this).attr("id");
         var className = $(this).attr("name");
     
@@ -63,7 +65,18 @@ function attachListeners(){
     });
     
     $(".classroom").click(function(){
-       alert("CLICKED"); 
+       alert("CLICKED from class classroom"); 
+    });
+    
+    $("ul").on("click", "a.classroom", function(){
+        alert("clicked from ul");
+        var classID = $(this).attr("id");
+        var className = $(this).attr("name");
+    
+        console.log("Link clicked " + classID + className);
+        
+        window.classID = classID;
+        window.className = className;
     });
 }
 
