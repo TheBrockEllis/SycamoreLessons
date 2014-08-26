@@ -54,7 +54,9 @@
     <script>
         $("document").ready(function(){
             alert("listeners attached");
-            $("body").on("click", "a.classroom", function(){
+            $("body").on("click", "a.classroom", function(event){
+                event.preventDefault();
+                
                 var classID = $(this).attr("id");
                 var className = $(this).attr("name");
             
