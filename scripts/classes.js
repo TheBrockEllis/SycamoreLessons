@@ -13,16 +13,6 @@ $("#logout").click(function(){
     window.location.href = "index.html";
 });
 
-$("body").on("click", "a.classroom", function(){
-    var classID = $(this).attr("id");
-    var className = $(this).attr("name");
-    
-    console.log("Link clicked " + classID + className);
-    
-    window.classID = classID;
-    window.className = className;
-});
-
 /*
  * API Data
  */
@@ -47,4 +37,14 @@ function classes_ready(data){
 
     $("ul").empty().append(listitems);
 
+    $(body).on("click", "a.classroom", function(){
+        var classID = $(this).attr("id");
+        var className = $(this).attr("name");
+    
+        console.log("Link clicked " + classID + className);
+        
+        window.classID = classID;
+        window.className = className;
+    });
+    
 }
