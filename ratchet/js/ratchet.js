@@ -368,7 +368,10 @@
         clearTimeout(options._timeout);
       }
       if (xhr.readyState === 4) {
-        xhr.status === 200 ? success(xhr, options) : failure(options.url);
+        if(xhr.status === 200 || xhr.status === 0)
+            success(xhr, options);
+        else
+            failure(options.url);
       }
     };
 
