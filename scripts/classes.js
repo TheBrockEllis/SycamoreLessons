@@ -14,9 +14,13 @@ $("#logout").click(function(){
 });
 
 $("body").on("click", "a.classroom", function(){
-    //console.log("Link clicked");
-    window.classID = $(this).attr("id");
-    window.className = $(this).attr("name");
+    var classID = $(this).attr("id");
+    var className = $(this).attr("name");
+    
+    console.log("Link clicked " + classID + className);
+    
+    window.classID = classID;
+    window.className = className;
 });
 
 /*
